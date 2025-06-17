@@ -59,6 +59,14 @@
     flex-direction: column;
     align-items: flex-end;
 
+    a {
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     .hero__menu-btn,
     .hero__declare-btn {
       background: rgb(231 231 231 / var(--tw-text-opacity,1));

@@ -50,7 +50,7 @@ const HeroSection = () => {
         <button className="hero__menu-btn">
           Menu <span className="plus">+</span>
         </button>
-        <button className="hero__declare-btn">Declare Now</button>
+        <a href="#declareEmergency"><button className="hero__declare-btn">Declare Now</button></a>
       </div>
     </section>
   );
