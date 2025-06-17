@@ -1,0 +1,95 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 0 2rem;
+  position: relative;
+
+  &__left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2.8vw;
+
+    h1 {
+      font-size: 7vw;
+      font-weight: 1000;
+      margin: 0;
+      color: rgb(231 231 231 / var(--tw-text-opacity,1));
+      font-family: 'Druk', 'Anton', 'Oswald', sans-serif;
+      letter-spacing: -1px;
+
+      &.highlight {
+        color: #ff5b3c;
+      }
+    }
+  }
+
+  &__right {
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 2rem;
+    max-width: 33rem;
+    margin-top: 8px;
+
+    p {
+      overflow-wrap: break-word;
+      font-family: var(--font-inter), Helvetica, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 450;
+      line-height: 140%;
+      letter-spacing: 1px;
+      color: #d4d4d4;
+    }
+  }
+
+  &__fixed-nav {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .hero__menu-btn,
+    .hero__declare-btn {
+      background: rgb(231 231 231 / var(--tw-text-opacity,1));
+      border: 1px solid black;
+      padding: 0.6rem 1.5rem;
+      font-size: 1.6rem;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 210px;
+    }
+    .hero__declare-btn {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hero__menu-btn {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .plus {
+        margin-left: auto;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    .hero__menu-btn:hover,
+    .hero__declare-btn:hover {
+      background: #ff5b3c;
+    }
+  }
+}

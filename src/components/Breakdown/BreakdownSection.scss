@@ -1,0 +1,119 @@
+.breakdown {
+  background-color: #000;
+  color: #E7E7E7;
+  padding: 5rem 2rem;
+  font-family: 'Helvetica Neue', sans-serif;
+
+  &__container {
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 4rem;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+     flex: 0 0 39%;
+     position: relative;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+     @media (max-width: 992px) {
+      flex: 1;
+    }
+  }
+
+  &__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sticky-heading {
+    position: sticky;
+    top: 60px;
+    align-self: flex-start;
+
+    @media (max-width: 992px) {
+      position: static;
+    }
+  }
+
+  &__description {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+
+    @media (max-width: 992px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: -40px;
+
+    .accordion {
+      border-top: 1px solid #E7E7E7;
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: #c7c7c9;
+        }
+
+        span {
+          font-size: 1.5rem;
+        }
+        .icon-large {
+        font-size: 20px;
+        color: #acacad;
+        }
+      }
+
+      &__content {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #c7c7c9;
+        }
+      }
+    }
+  }
+
+  .intro-button {
+    background: #E7E7E7;
+    color: #000;
+    padding: 1rem 2.3rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+
+    &:hover {
+      background: #ff6433;
+    }
+  }
+}
