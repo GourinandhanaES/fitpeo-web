@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { motion, useScroll } from 'framer-motion';
 import './ScrollToTop.scss';
 
 const ScrollToTop = () => {
-  const [scrollWidth, setScrollWidth] = useState(0);
-
-  const updateScrollProgress = () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    setScrollWidth(scrolled);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', updateScrollProgress);
-    return () => window.removeEventListener('scroll', updateScrollProgress);
-  }, []);
+  const { scrollYProgress } = useScroll();
 
   return (
-    <div
+    <motion.div
       className="scroll-progress-bar"
-      style={{ width: `${scrollWidth}%` }}
-    ></div>
+      style={{
+        scaleX: scrollYProgress,
+        top: 0,
+        left: 0,
+        right: 0,
+        originX: 0,
+        zIndex: 1000,
+      }}
+    />
   );
 };
 

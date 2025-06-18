@@ -1,6 +1,7 @@
 import React from 'react';
 import './HeroSection.scss';
 import { motion } from 'framer-motion';
+import Menu from '../Menu/Menu';
 
 const textVariants = {
   hidden: { opacity: 0, y: 50, scaleY: 1, },
@@ -46,12 +47,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="hero__fixed-nav">
-        <button className="hero__menu-btn">
-          Menu <span className="plus">+</span>
-        </button>
-        <a href="#declareEmergency"><button className="hero__declare-btn">Declare Now</button></a>
-      </div>
+      <Menu/>
     </section>
   );
 };
