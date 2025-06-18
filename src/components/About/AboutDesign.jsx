@@ -32,7 +32,7 @@ const AboutDesign = () => {
           </div>
           <div className='aboutdesign__description4'>
             <p>Together, we sit at the very beginning of the creative process. The tools we use and the choices we make can influence society’s behaviour, change economies and challenge everything that’s come before.</p>
-            <p>Because design, whether it’s a product, a piece of packaging or an exhibition space, has impact. It’s up to us whether that impact is harmful or healing. <br />
+            <p>Because design, whether it’s a product, a piece of packaging or an exhibition space, has impact. It’s up to us whether that impact is harmful or healing. <br /> <br />
             We’re glad you’re here. Let’s get to work.</p>
           </div>
           <div className='aboutdesign__buttons'>
