@@ -47,10 +47,10 @@ const Menu = () => {
 
                 <ul>
                     <a href="/" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faHome} /> <span>Home</span></li></a>
-                    <a href="" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faInfo} /> <span>About</span></li></a>
+                    <a href="/about" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faInfo} /> <span>About</span></li></a>
                     <a href="/latest" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faNewspaper} /> <span>Latest</span></li></a>
-                    <a href="" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faEnvelope} /> <span>Contact</span></li></a>
-                    <a href="" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faGlobe} /> <span>Choose Global Chapter</span></li></a>
+                    <a href="/contact" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faEnvelope} /> <span>Contact</span></li></a>
+                    <a href="/global" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faGlobe} /> <span>Choose Global Chapter</span></li></a>
                 </ul>
 
                 <a href="#declareEmergency">
