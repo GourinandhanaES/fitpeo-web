@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .hero {
   display: flex;
@@ -8,7 +9,7 @@
   height: 100vh;
   background-color: #000;
   color: #fff;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   position: relative;
 
   &__left {
@@ -17,13 +18,14 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 2.8vw;
+    margin-top: 30px;
 
     h1 {
-      font-size: 7vw;
+      font-size: 7rem;
       font-weight: 1000;
       margin: 0;
       color: rgb(231 231 231 / var(--tw-text-opacity,1));
-      font-family: 'Druk', 'Anton', 'Oswald', sans-serif;
+      font-family: "Bebas Neue", sans-serif;
       letter-spacing: -1px;
 
       &.highlight {
@@ -100,4 +102,79 @@
       background: #ff5b3c;
     }
   }
+
+ &__heading1 {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+
+  h1 {
+    font-size: 7vw;
+    font-weight: 1000;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: -1px;
+    color: rgb(231 231 231 / var(--tw-text-opacity, 1));
+
+    &.highlight {
+      color: #ff5b3c;
+    }
+  }
+  &__heading2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 13.5rem;
+    font-weight: 1000;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(231 231 231 / var(--tw-text-opacity, 1));
+    line-height: 0.79;
+
+    &.highlight {
+      color: #ff5b3c;
+    }
+  }
 }
+
+@media (max-width: 728px) {
+  .hero {
+    flex-direction: column;
+    padding: 1rem 1rem;
+    justify-content: flex-start;
+    height: 75vh;
+
+    &__left,
+    &__right {
+      width: 100%;
+    }
+
+    &__left {
+      margin-top: 1rem;
+      gap: 1.8rem;
+
+      h1 {
+        font-size: 12vw;
+        text-align: left;
+      }
+    }
+
+    &__right {
+      margin-top: 1.5rem;
+      padding-left: 0;
+
+      p {
+        font-size: 1rem;
+        line-height: 150%;
+      }
+    }
+
+    &__heading1,
+    &__heading2 {
+      align-items: flex-start;
+    }
+  }
+}
+

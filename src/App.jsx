@@ -5,6 +5,7 @@ import LatestPage from './pages/LatestPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Global from './pages/Global';
+import Latestdetails from './components/Latestdetails/Latestdetails';
 
 const App = () => (
   <Router>
@@ -14,6 +15,8 @@ const App = () => (
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/global" element={<Global />} />
+      <Route path="/latest-study/:id" element={<Latestdetails />} />
+
     </Routes>
   </Router>
 );

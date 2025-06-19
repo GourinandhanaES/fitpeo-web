@@ -1,0 +1,68 @@
+.signatories-section {
+  background-color: #000;
+  color: #e7e7e7;
+  padding: 4rem 2rem;
+
+  &.visible .signatory-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .signatories-title {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    color: #e7e7e7;
+  }
+
+  .signatories-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    margin-top: -10px;
+
+    .highlight {
+      background-color: #ff5b3c;
+      color: black;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .signatories-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0.8rem;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .signatory-link {
+    color: #b8b5b5;
+    text-decoration: none;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    line-height: 3px;
+
+    &:hover {
+      text-decoration: underline;
+      color: #ff5b3c;
+    }
+  }
+}

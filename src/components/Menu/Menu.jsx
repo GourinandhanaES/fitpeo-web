@@ -1,19 +1,42 @@
-// components/Menu/Menu.js
 import React, { useState, useEffect } from 'react';
 import './Menu.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faXmark, faHome, faInfo, faNewspaper, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import GlobalOverlay from '../GlobalOverlay/GlobalOverlay';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showGlobalOverlay, setShowGlobalOverlay] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    if (isOpen || showGlobalOverlay) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [isOpen]);
+  }, [isOpen, showGlobalOverlay]);
+
+  const handleDeclareNowClick = () => {
+    setIsOpen(false);
+
+    if (location.pathname === '/') {
+      const el = document.getElementById('declareEmergency');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/#declareEmergency');
+    }
+  };
+
 
   return (
     <>
@@ -21,9 +44,9 @@ const Menu = () => {
         <button className="menu__menu-btn" onClick={() => setIsOpen(!isOpen)}>
           Menu <FontAwesomeIcon icon={isOpen ? faXmark : faPlus} className="icon" />
         </button>
-        <a href="#declareEmergency">
-          <button className="menu__declare-btn">Declare Now</button>
-        </a>
+        <button className="menu__declare-btn" onClick={handleDeclareNowClick}>
+          Declare Now
+        </button>
       </div>
 
       <AnimatePresence>
@@ -50,16 +73,24 @@ const Menu = () => {
                     <a href="/about" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faInfo} /> <span>About</span></li></a>
                     <a href="/latest" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faNewspaper} /> <span>Latest</span></li></a>
                     <a href="/contact" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faEnvelope} /> <span>Contact</span></li></a>
-                    <a href="/global" style={{textDecoration:"none"}}><li><FontAwesomeIcon icon={faGlobe} /> <span>Choose Global Chapter</span></li></a>
+                    <li onClick={() => {
+                      setIsOpen(false);  
+                      setShowGlobalOverlay(true);  
+                    }}>
+                      <FontAwesomeIcon icon={faGlobe} /> <span>Choose Global Chapter</span>
+                    </li>
                 </ul>
 
-                <a href="#declareEmergency">
-                    <button className="menu__declare-btn-inside">Declare Now</button>
-                </a>
+                <button className="menu__declare-btn-inside" onClick={handleDeclareNowClick}>
+                 Declare Now
+                </button>
                 </motion.div>
             </motion.div>
         )}
       </AnimatePresence>
+      {showGlobalOverlay && (
+        <GlobalOverlay onClose={() => setShowGlobalOverlay(false)} />
+      )}
     </>
   );
 };

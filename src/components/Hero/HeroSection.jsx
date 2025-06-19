@@ -1,40 +1,99 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HeroSection.scss';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Menu from '../Menu/Menu';
 
-const textVariants = {
-  hidden: { opacity: 0, y: 50, scaleY: 1, },
-  visible: i => ({
+const letterVariants = {
+  hidden: { opacity: 0, y: 50},
+  visible: (i) => ({
     opacity: 1,
     y: 0,
-    scaleY: 2, 
     transition: {
       delay: i * 0.3,
-      duration: 0.6,
-      ease: 'easeOut',
+      duration: 0.5,
+      ease: [0.6, -0.05, 0.01, 0.99],
     },
   }),
 };
 
+const lineVariants = {
+  hidden: { opacity: 0, y: 50},
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
 
 const HeroSection = () => {
+  const [showLogo, setShowLogo] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowLogo(false);
+    }, 1500); 
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero__left">
-        {['DESIGN', 'DECLARES', 'UK'].map((word, index) => (
-         <motion.h1
-            key={word}
-            custom={index}
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-            className={word === 'UK' ? 'highlight' : ''}
-            style={{ transform: 'scaleY(1.5)', transformOrigin: 'top' }}
-          >
-            {word}
-         </motion.h1>
-        ))}
+        <AnimatePresence>
+          {showLogo && (
+            <motion.div
+              className="hero__heading1"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+            >
+              {['D', '!'].map((char, index) => (
+                <motion.h1
+                  key={char}
+                  custom={index}
+                  variants={letterVariants}
+                  className="hero__letter"
+                >
+                  {char}
+                </motion.h1>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {!showLogo && (
+            <motion.div
+              className="hero__heading2"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+            >
+              {['DESIGN', 'DECLARES', 'UK'].map((line, index) => (
+                <motion.h1
+                  key={index}
+                  variants={lineVariants}
+                  className={line === 'UK' ? 'highlight' : ''}
+                >
+                  {line}
+                </motion.h1>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div className="hero__right">
@@ -47,7 +106,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <Menu/>
+      <Menu />
     </section>
   );
 };
