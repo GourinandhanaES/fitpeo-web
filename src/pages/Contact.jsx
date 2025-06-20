@@ -9,6 +9,7 @@ const Contact = () => {
   return (
     <section>
       <ScrollToTop />
+      <div style={{ position: 'relative' }}>
       <motion.div
         className="contact"
         initial={{ opacity: 0, y: 60 }}
@@ -56,6 +57,7 @@ const Contact = () => {
         </div>
       </motion.div>
       <Menu />
+      </div>
       <Footer />
     </section>
   );

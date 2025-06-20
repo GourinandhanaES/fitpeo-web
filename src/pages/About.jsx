@@ -12,11 +12,13 @@ const About = () => {
   return (
     <div className='aboutt'>
       <ScrollToTop/>
-      <Menu/>
+      <div style={{ position: 'relative' }}>
       <AboutDesign/>
       <Partnerships/>
       <Designers/>
       <Group/>
+      <Menu/>
+      </div>
       <Footer/>
     </div>
   )

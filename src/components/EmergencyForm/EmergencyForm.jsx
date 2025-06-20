@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './EmergencyForm.scss';
+import CustomCheckbox from '../checkbox/CustomCheckbox';
 
 const DeclareEmergencyForm = () => {
   const [formData, setFormData] = useState({
     entityType: '',
     website: '',
-    country: 'United Kingdom',
+    country: '',
     discipline: '',
     email: '',
     reason: '',
@@ -34,75 +35,33 @@ const DeclareEmergencyForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="entity-type-section">
             <label className="checkbox-container">
-              <input 
-                type="checkbox" 
-                name="entityType" 
-                value="business"
-                checked={formData.entityType === 'business'}
-                onChange={(e) => setFormData(prev => ({ ...prev, entityType: e.checked ? 'business' : '' }))}
-              />
-              <span className="checkmark"></span>
+              <div style={{ marginRight: '10px' , marginTop:'20px', marginLeft:'-35px' }}> <CustomCheckbox /></div>
               As a business
             </label>
             
             <label className="checkbox-container">
-              <input 
-                type="checkbox" 
-                name="entityType" 
-                value="individual"
-                checked={formData.entityType === 'individual'}
-                onChange={(e) => setFormData(prev => ({ ...prev, entityType: e.checked ? 'individual' : '' }))}
-              />
-              <span className="checkmark"></span>
+              <div style={{ marginRight: '10px' , marginTop:'20px', marginLeft:'-35px' }}> <CustomCheckbox /></div>
               As an individual
             </label>
             
             <label className="checkbox-container">
-              <input 
-                type="checkbox" 
-                name="entityType" 
-                value="public"
-                checked={formData.entityType === 'public'}
-                onChange={(e) => setFormData(prev => ({ ...prev, entityType: e.checked ? 'public' : '' }))}
-              />
-              <span className="checkmark"></span>
+              <div style={{ marginRight: '10px' , marginTop:'20px', marginLeft:'-35px' }}> <CustomCheckbox /></div>
               As a public institution
             </label>
             
             <label className="checkbox-container">
-              <input 
-                type="checkbox" 
-                name="entityType" 
-                value="team"
-                checked={formData.entityType === 'team'}
-                onChange={(e) => setFormData(prev => ({ ...prev, entityType: e.checked ? 'team' : '' }))}
-              />
-              <span className="checkmark"></span>
+              <div style={{ marginRight: '10px' , marginTop:'20px', marginLeft:'-35px' }}> <CustomCheckbox /></div>
               As a team or department
             </label>
           </div>
 
           <div className="form-field">
-            <label htmlFor="website">Website *</label>
-            <input
-              type="text"
-              id="website"
-              name="website"
-              value={formData.website}
-              onChange={handleInputChange}
-              required
-            />
+             <input type="text" id="website" name="website" placeholder="Website: *" value={formData.website} onChange={handleInputChange} required/>
           </div>
 
           <div className="form-field">
-            <label htmlFor="country">Country *</label>
-            <select
-              id="country"
-              name="country"
-              value={formData.country}
-              onChange={handleInputChange}
-              required
-            >
+            <select  id="country"  name="country" className="custom-dropdown" value={formData.country}  onChange={handleInputChange}  required >
+              <option value="" disabled selected hidden>Country: *</option>
               <option value="United Kingdom">United Kingdom</option>
               <option value="United States">United States</option>
               <option value="Canada">Canada</option>
@@ -114,15 +73,9 @@ const DeclareEmergencyForm = () => {
           </div>
 
           <div className="form-field">
-            <label htmlFor="discipline">Discipline *</label>
-            <select
-              id="discipline"
-              name="discipline"
-              value={formData.discipline}
-              onChange={handleInputChange}
-              required
-            >
-              <option value="">Select discipline</option>
+            <select id="discipline" name="discipline" className="custom-dropdown" value={formData.discipline} onChange={handleInputChange} required >
+              <option value="" disabled selected hidden>Discipline: *</option>
+              <option value="Design">Design</option>
               <option value="Design">Design</option>
               <option value="Technology">Technology</option>
               <option value="Marketing">Marketing</option>
@@ -132,24 +85,14 @@ const DeclareEmergencyForm = () => {
           </div>
 
           <div className="form-field">
-            <label htmlFor="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-            />
+            <input type="email" id="email" name="email" placeholder="Email: *" value={formData.email} onChange={handleInputChange} required />
           </div>
 
           <div className="form-field">
-            <label htmlFor="reason">
-              Why are you declaring? In a sentence or two, tell us why you're joining Design Declares.
-            </label>
             <textarea
               id="reason"
               name="reason"
+              placeholder="Why are you declaring? In a sentence or two, tell us why you're joining Design Declares."
               value={formData.reason}
               onChange={handleInputChange}
               rows={6}
@@ -158,24 +101,12 @@ const DeclareEmergencyForm = () => {
 
           <div className="consent-section">
             <label className="checkbox-container small-text">
-              <input
-                type="checkbox"
-                name="dataConsent"
-                checked={formData.dataConsent}
-                onChange={handleInputChange}
-              />
-              <span className="checkmark"></span>
+              <div style={{ marginRight: '10px' , marginTop:'20px', marginLeft:'-35px' }}> <CustomCheckbox /></div>
               I consent for my data to be used for the purpose of this Declaration, and for my name and reason for signing to be used in the promotion of the Declaration on this site and across our social channels.
             </label>
 
             <label className="checkbox-container small-text">
-              <input
-                type="checkbox"
-                name="newsletter"
-                checked={formData.newsletter}
-                onChange={handleInputChange}
-              />
-              <span className="checkmark"></span>
+              <div style={{ marginRight: '10px' , marginTop:'5px', marginLeft:'-35px' }}> <CustomCheckbox /></div>
               I would like to be added to the Design Declares newsletter and receive further updates.
             </label>
           </div>

@@ -6,11 +6,17 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Global from './pages/Global';
 import Latestdetails from './components/Latestdetails/Latestdetails';
+import IrelandPage from './pages/Ireland';
+import BrazilPage from './pages/Brazil';
+import AustraliaPage from './pages/Australia';
 
 const App = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/ie" element={<IrelandPage />} />
+      <Route path="/br" element={<BrazilPage />} />
+      <Route path="/au" element={<AustraliaPage />} />
       <Route path="/latest" element={<LatestPage />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />

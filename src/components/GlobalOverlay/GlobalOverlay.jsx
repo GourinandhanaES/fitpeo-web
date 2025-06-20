@@ -1,17 +1,24 @@
-// components/GlobalChapterOverlay.js
 import React from 'react';
 import './GlobalOverlay.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const chapters = [
-  'UNITED KINGDOM',
-  'IRELAND',
-  'BRASIL',
-  'AUSTRALIA'
+  { label: 'UNITED KINGDOM', path: '/' },
+  { label: 'IRELAND', path: '/ie' },
+  { label: 'BRAZIL', path: '/br' },
+  { label: 'AUSTRALIA', path: '/au' }
 ];
 
 const GlobalOverlay = ({ onClose }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (path) => {
+    navigate(path);
+    onClose();
+  };
+
   return (
     <div className="chapter-overlay">
       <div className="chapter-overlay__close" onClick={onClose}>
@@ -23,13 +30,14 @@ const GlobalOverlay = ({ onClose }) => {
         </div>
         <div className="chapter-overlay__right">
           {chapters.map((chapter, index) => (
-            <a
+            <div
               key={index}
-              href={`https://designdeclares.${chapter.toLowerCase().replace(/\s/g, '')}.ie`} // sample
+              onClick={() => handleClick(chapter.path)}
               className="chapter-overlay__item"
+              style={{ cursor: 'pointer' }}
             >
-              {chapter}
-            </a>
+              {chapter.label}
+            </div>
           ))}
         </div>
       </div>

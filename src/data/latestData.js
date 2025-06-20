@@ -6,6 +6,7 @@ export const latestNews = [
     date: "30.04.2025, 04 PM:30",
     title: "Embedding Sustainability in the Design Curriculum",
     summary: "Outlining the journey of how the Design Declares initiative was integrated into the National College of Art and Design’s curriculum for BA Graphic Design students.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "/news/embedding-sustainability"
   },
   {
@@ -15,6 +16,7 @@ export const latestNews = [
     date: "24.04.2025, 03 PM:30",
     title: "SD4P Collective: How can Service Design drive meaningful sustainability impact",
     summary: "Recap: SD4P Collective working session – 28th March 2025",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -24,6 +26,7 @@ export const latestNews = [
     date: "18.12.2024, 08 AM:38",
     title: "Sasha Titchkosky Interview",
     summary: "An Interview with Koskela Founder and Design Declares Australia Board Member - Sasha Titchkosky",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -33,6 +36,7 @@ export const latestNews = [
     date: "10.12.2024, 08 AM:37",
     title: "Andrew Simpson Interview",
     summary: "An Interview with Vert Design and Design Declares Australia CEO - Andew Simpson",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -42,6 +46,7 @@ export const latestNews = [
     date: "06.12.2024, 02 PM:30",
     title: "Designing Tomorrow: Speculative Thinking Shapes Our Present",
     summary: "Design Declares' November Event Challenges Perspectives on Sustainability and Innovation",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -51,6 +56,7 @@ export const latestNews = [
     date: "27.06.2024, 04 PM:30",
     title: "D! June Event Recap",
     summary: "Design Declares has always been about people. From the moment that Design Council CDO Cat Drew introduced Alexie Sommer and Jo Barnard back in 2022, followed by Abb-d Taiyo and Aurelie Lionet coming onboard and aligning to the vision, we knew Design Declares was something special.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -60,6 +66,7 @@ export const latestNews = [
     date: "26.06.2024, 02 PM:30",
     title: "Reducing Website Carbon Emissions",
     summary: "In an industry first, MEK have documented exactly how they approached and solved this challenge so they can inspire others to do the same and help businesses transition to sustainable digital practices.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -69,6 +76,7 @@ export const latestNews = [
     date: "01.01.2024, 07 PM:30",
     title: "Creative Climate Investigations",
     summary: "A showcase of 8 projects exploring greenwashing, air quality, environmental effects on wellbeing, plastic, the ecological impacts of data harvesting, trees, global dimming, and green spaces, collected together for the first time in a thoughtfully designed limited-edition book.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -78,6 +86,7 @@ export const latestNews = [
     date: "04.09.2023, 04 PM:21",
     title: "Becoming a Community Interest Company",
     summary: "Design Declares has become a certified CIC, a people-powered Community Interest Company with planet-led ambitions.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -87,6 +96,7 @@ export const latestNews = [
     date: "11.06.2023, 09 PM:30",
     title: "Connecting climate scientists and design educators together",
     summary: "Climify podcast is to connect climate scientists and design educators together so that we can bring climate-related projects into our classrooms.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -96,6 +106,7 @@ export const latestNews = [
     date: "11.06.2023, 06 PM:30",
     title: "Revo Modular Furniture System for Profim, designed by Pearson Lloyd",
     summary: "Making its global debut at Clerkenwell Design Week, Revo is a stunning new design by Pearson Lloyd, for Profim, combining circular thinking with playful design to create a lightweight and versatile workplace furniture system.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -105,6 +116,7 @@ export const latestNews = [
     date: "03.06.2023, 04 PM:30",
     title: "Only One is an action platform for the planet, designed by Driftime®",
     summary: "Only One invite people to make monthly donations to plant ocean trees and coral reefs, remove carbon and plastics from our seas, and track the results.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -114,6 +126,7 @@ export const latestNews = [
     date: "01.06.2023, 04 PM:30",
     title: "What’s the future for Design Declares?",
     summary: "A few months ago, an article by Chris Hockell was published in Dezeen criticising Architects Declare for failing to live up to its ambitions.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -123,6 +136,7 @@ export const latestNews = [
     date: "03.10.2022, 03 PM:30",
     title: "Carbon targets for the Design Industry",
     summary: "Two big barriers for any business setting out to reduce their impact on the planet are knowing where they are starting from and understanding what they should be aiming for.",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
   {
@@ -132,6 +146,7 @@ export const latestNews = [
     date: "",
     title: "Design Declares Australia Launch",
     summary: "Design Declares' November Event Challenges Perspectives on Sustainability and Innovation",
+    description: "This case study explores the integration of the Design Declares Ireland initiative into the curriculum of the BA Graphic Design programme at the National College of Art and Design (NCAD), Dublin. It aims to prepare students not only to become competent designers but also to become ethically aware practitioners.The Design Practices module is delivered annually to second-year Graphic Design students within the School of Design. The module introduces the historical, theoretical, cultural, and professional contexts of design practice and aims to enable students to apply creative methodologies for the documentation and presentation of work.",
     link: "#"
   },
 ];

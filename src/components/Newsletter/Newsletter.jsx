@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Newsletter.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import NewsletterImage from '../../assets/images/NewsletterImage.webp';
+import CustomCheckbox from '../checkbox/CustomCheckbox';
 
 const Newsletter = () => {
 
@@ -38,7 +39,7 @@ const Newsletter = () => {
               <input type="email" className="newsletter__input" placeholder="Email:*" />
               
               <div className="newsletter__checkbox-group">
-                <input type="checkbox" id="subscribe" className="newsletter__checkbox" />
+                <CustomCheckbox />
                 <label htmlFor="subscribe">
                   I would like to be added to the Design Declares! newsletter and receive further updates.
                 </label>

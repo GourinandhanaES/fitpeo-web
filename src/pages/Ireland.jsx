@@ -1,5 +1,4 @@
-// pages/Home.jsx
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import HeroSection from '../components/Hero/HeroSection';
 import Declaration from '../components/Declaration/Declaration';
@@ -11,10 +10,8 @@ import BreakdownSection from '../components/Breakdown/Breakdown';
 import Emergency from '../components/Emergency/Emergency';
 import Newsletter from '../components/Newsletter/Newsletter';
 import Latest from '../components/Latest/Latest';
-import Menu from '../components/Menu/Menu';
 
-
-const Home = () => {
+const IrelandPage = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -25,31 +22,27 @@ const Home = () => {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 300); 
+      }, 300);
     }
   }, [location]);
 
   return (
     <>
       <ScrollToTop />
-      <div style={{ position: 'relative' }}>
       <main>
-        <HeroSection />
-        <BreakdownSection/>
+        <HeroSection country="IRELAND" />
+        <BreakdownSection />
         <Declaration />
         <Emergency />
         <DeclareEmergency />
-        <Latest/>
-        <Newsletter/>
-        <Signatories count={514} subtitle="Signatories and counting in" highlight="D! UK" />
-        <Signatories count={184} subtitle="Global Supporters" highlight="D! UK" />
-        <div style={{ height: '150px', backgroundColor:'black', borderBottomRightRadius:"35px", borderBottomLeftRadius:"35px" }}></div>
-        <Menu />
+        <Latest />
+        <Newsletter />
+        <Signatories count={284} />
+        <Signatories count={98} />
       </main>
-      </div>
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default IrelandPage;

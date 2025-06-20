@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Menu.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showGlobalOverlay, setShowGlobalOverlay] = useState(false);
+  const [atFooter, setAtFooter] = useState(false);
+  const menuRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -23,6 +25,27 @@ const Menu = () => {
       document.body.style.overflow = 'auto';
     };
   }, [isOpen, showGlobalOverlay]);
+
+  // footer hide
+
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setAtFooter(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
 
   const handleDeclareNowClick = () => {
     setIsOpen(false);
@@ -40,7 +63,12 @@ const Menu = () => {
 
   return (
     <>
-      <div className="menu__fixed-nav">
+    <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.9, duration: 0.8, ease: 'easeOut' }}
+          >
+      <div ref={menuRef} className={`menu__fixed-nav ${atFooter ? 'stuck-to-footer' : ''}${isOpen ? 'hide-on-open' : ''}`} >
         <button className="menu__menu-btn" onClick={() => setIsOpen(!isOpen)}>
           Menu <FontAwesomeIcon icon={isOpen ? faXmark : faPlus} className="icon" />
         </button>
@@ -91,6 +119,7 @@ const Menu = () => {
       {showGlobalOverlay && (
         <GlobalOverlay onClose={() => setShowGlobalOverlay(false)} />
       )}
+    </motion.div>
     </>
   );
 };

@@ -23,7 +23,7 @@ const LatestPage = () => {
 
   return (
     <div>
-    <div id='LatestPage' className="latestpage">
+    <div id='LatestPage' className="latestpage" style={{ position: 'relative' }}>
      <ScrollToTop/>
      <Menu/>
       <div className="latestpage__container">

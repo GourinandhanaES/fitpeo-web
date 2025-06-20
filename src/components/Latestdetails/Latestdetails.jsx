@@ -1,73 +1,52 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import './Latestdetails.scss'
-import LogoImg from "../../assets/images/Logo.png";
+import './LatestDetails.scss';
+import LogoImg from '../../assets/images/Logo.png';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer/Footer';
 import { latestNews } from '../../data/latestData';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
-
-
 const LatestPage = () => {
   const { id } = useParams();
-  const latestStudy = latestNews.find((item) => item.id === parseInt(id));
+  const latestStudy = latestNews.find(item => item.id === parseInt(id));
+
+  if (!latestStudy) return <p>Not found</p>;
 
   return (
-    <div>
-    <div id='LatestPage' className="latestpage">
-     <ScrollToTop/>
-     <Menu/>
-      <div className="latestpage__container">
-        {/* Left Side */}
-        <div className="latestpage__left">
-            <div>
-              <img src={LogoImg} alt="Logo" style={{ marginTop: '-4rem' , marginLeft: '-2rem'}} />
-            </div>
-         <div className="heading">
-            <h1>{latestStudy.title}</h1>
-            <div className="content-wrapper">
-              {/* Header Section */}
-              <div className="header-section">
-                <div className="tags-container">
-                  <div>
-                    {latestStudy.tags.map((tag, i) => (
-                    <span className="tag" key={i}>{tag}</span>
-                  ))}
-                  <span className="date">{latestStudy.date}</span>
-                  </div>
-                  <button className="share-button">
-                    Share Article
-                  </button>
-                </div>
-              </div>
+    <div id='latestdetails'>
+    <div className="latestdetails__page">
+      <ScrollToTop />   
+      <img src={LogoImg} alt="Logo" className="latestdetails__logo" />
 
-              {/* Hero Image */}
-              <img 
-                src={latestStudy.image} 
-                alt={latestStudy.title} 
-                className="hero-image"
-              />
+      <div className="latestdetails__content-wrapper">
+        <div className="latestdetails__left">
+          <h1 className="latestdetails__title">{latestStudy.title}</h1>
 
-              {/* Content Section */}
-              <div className="content-section">
-                <div className="summary">{latestStudy.summary}</div>
-                
-                {latestStudy.description && (
-                  <div className="description">
-                    {/* Check if description has multiple paragraphs */}
-                    {latestStudy.description.split('\n\n').map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
-                    ))}
-                  </div>
-                )}
-              </div>
+          <div className="latestdetails__meta">
+            <div className="latestdetails__tags-date">
+              {latestStudy.tags.map((tag, i) => (
+                <span key={i} className="latestdetails__tag">{tag}</span>
+              ))}
+              <span className="latestdetails__date">{latestStudy.date}</span>
             </div>
+            <Link to="#" className="latestdetails__share-btn">Share Article</Link>
           </div>
+
+          <img src={latestStudy.image} alt={latestStudy.title} className="latestdetails__image" />
         </div>
       </div>
+      <p className="latestdetails__summary">{latestStudy.summary}</p>
+      <div className="latestdetails__text-content">
+        {latestStudy.description &&
+          latestStudy.description.split('\n\n').map((para, idx) => (
+            <p key={idx} className="latestdetails__description">{para}</p>
+          ))}
+      </div>
+
+      <Menu />
     </div>
-    <Footer/>
+    <Footer />
     </div>
   );
 };

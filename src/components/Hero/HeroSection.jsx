@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.scss';
 import { motion, AnimatePresence } from 'framer-motion';
-import Menu from '../Menu/Menu';
 
 const letterVariants = {
   hidden: { opacity: 0, y: 50},
@@ -38,7 +37,7 @@ const containerVariants = {
   },
 };
 
-const HeroSection = () => {
+const HeroSection = ({ country = 'UK' }) => {
   const [showLogo, setShowLogo] = useState(true);
 
   useEffect(() => {
@@ -82,11 +81,11 @@ const HeroSection = () => {
               animate="visible"
               variants={containerVariants}
             >
-              {['DESIGN', 'DECLARES', 'UK'].map((line, index) => (
+              {['DESIGN', 'DECLARES', country.toUpperCase()].map((line, index) => (
                 <motion.h1
                   key={index}
                   variants={lineVariants}
-                  className={line === 'UK' ? 'highlight' : ''}
+                  className={line === country.toUpperCase() ? 'highlight' : ''}
                 >
                   {line}
                 </motion.h1>
@@ -96,7 +95,12 @@ const HeroSection = () => {
         </AnimatePresence>
       </div>
 
-      <div className="hero__right">
+      <motion.div
+        className="hero__right"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2.5, duration: 0.8, ease: 'easeOut' }}
+      >
         <p>
           Design Declares is a growing group of designers, design studios,
           agencies and institutions here to declare a climate and ecological
@@ -104,9 +108,8 @@ const HeroSection = () => {
           harnessing the tools of our industry to reimagine, rebuild and heal
           our world.
         </p>
-      </div>
+      </motion.div>
 
-      <Menu />
     </section>
   );
 };

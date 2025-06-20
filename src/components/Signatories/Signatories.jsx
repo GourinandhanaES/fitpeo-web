@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import signatories from '../../data/signatories';
 import './Signatories.scss';
+import CountUp from 'react-countup';
 
-const SignatoriesSection = ({ count }) => {
+const SignatoriesSection = ({ count, subtitle, highlight }) => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -23,9 +24,12 @@ const SignatoriesSection = ({ count }) => {
 
   return (
     <section className={`signatories-section ${isVisible ? 'visible' : ''}`} ref={sectionRef}>
-      <h2 className="signatories-title">#{count}</h2>
+      <h2 className="signatories-title"> #{' '} {isVisible && (
+          <CountUp end={count} duration={2.5} separator="," />
+        )}
+      </h2>
       <h3 className="signatories-subtitle">
-        Signatories and counting in <span className="highlight">D! UK</span>
+        {subtitle} <span className="highlight">{highlight}</span>
       </h3>
 
       <div className="signatories-grid">
