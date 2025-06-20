@@ -27,7 +27,6 @@ const GlobalOverlay = ({ onClose }) => {
       </div>
       <div className="chapter-overlay__content">
         <div className="chapter-overlay__left">
-           <img src={LogoImg} alt="Logo" className="dlogoo" />
           <h2>Select Global Chapter:</h2>
         </div>
         <div className="chapter-overlay__right">

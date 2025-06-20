@@ -3,8 +3,8 @@ import './Latest.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import { latestNews } from '../../data/latestData';
 
-const Latest = () => {
-  const homepageLatest = latestNews.filter(item => item.id === 2 || item.id === 5);
+const Latest = ({ filterIds = [] }) => {
+  const homepageLatest = latestNews.filter(item => filterIds.includes(item.id));
 
   return (
     <section className="latest">

@@ -37,7 +37,7 @@ const BrazilPage = () => {
         <Declaration />
         <Emergency />
         <DeclareEmergency />
-        <Latest />
+        <Latest filterIds={[8, 9]} />
         <Newsletter />
         <Signatories count={284} subtitle="Signatories and counting in" highlight="D! BRAZIL"  />
         <Signatories count={98} subtitle="Global Supporters" highlight="D! BRAZIL"/>

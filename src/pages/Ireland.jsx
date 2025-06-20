@@ -35,7 +35,7 @@ const IrelandPage = () => {
         <Declaration />
         <Emergency />
         <DeclareEmergency />
-        <Latest />
+        <Latest filterIds={[1, 6]} />
         <Newsletter />
         <Signatories count={284} />
         <Signatories count={98} />

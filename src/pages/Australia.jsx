@@ -10,8 +10,9 @@ import BreakdownSection from '../components/Breakdown/Breakdown';
 import Emergency from '../components/Emergency/Emergency';
 import Newsletter from '../components/Newsletter/Newsletter';
 import Latest from '../components/Latest/Latest';
+import Menu from '../components/Menu/Menu';
 
-const IrelandPage = () => {
+const AustraliaPage = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -29,20 +30,23 @@ const IrelandPage = () => {
   return (
     <>
       <ScrollToTop />
+      <div style={{ position: 'relative' }}>
       <main>
         <HeroSection country="AUSTRALIA" />
         <BreakdownSection />
         <Declaration />
         <Emergency />
         <DeclareEmergency />
-        <Latest />
+        <Latest filterIds={[3, 4]} />
         <Newsletter />
-        <Signatories count={284} />
-        <Signatories count={98} />
+        <Signatories count={632} subtitle="Signatories and counting in" highlight="D! AUSTRALIA"   />
+        <Signatories count={348} subtitle="Global Supporters" highlight="D! AUSTRALIA" />
+        <Menu />
       </main>
+      </div>
       <Footer />
     </>
   );
 };
 
-export default IrelandPage;
+export default AustraliaPage;

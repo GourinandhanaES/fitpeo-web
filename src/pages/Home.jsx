@@ -39,7 +39,7 @@ const Home = () => {
         <Declaration />
         <Emergency />
         <DeclareEmergency />
-        <Latest/>
+        <Latest filterIds={[2, 5]} />
         <Newsletter/>
         <Signatories count={514} subtitle="Signatories and counting in" highlight="D! UK" />
         <Signatories count={184} subtitle="Global Supporters" highlight="D! UK" />

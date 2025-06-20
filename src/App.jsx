@@ -8,9 +8,11 @@ import Latestdetails from './components/Latestdetails/Latestdetails';
 import IrelandPage from './pages/Ireland';
 import BrazilPage from './pages/Brazil';
 import AustraliaPage from './pages/Australia';
+import Scroll from './components/Scroll/Scroll';
 
 const App = () => (
   <Router>
+    <Scroll/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/ie" element={<IrelandPage />} />
