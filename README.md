@@ -34,7 +34,7 @@ This is a high-fidelity, animated React + SCSS front-end clone of [Design Declar
 ## Screenshots
 ### 🖥️ Desktop View
 
-![Design Declares Clone – Desktop](https://fitpeo-web.vercel.app/src/assets/images/design-desktop.png)
+![Design Declares Clone – Desktop](./src/assets/images/design-desktop.png)
 
 
  This project primarily focuses on design implementation and UX fidelity. Form functionality and backend integrations are not fully implemented.
