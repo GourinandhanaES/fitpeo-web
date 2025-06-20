@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import LatestPage from './pages/LatestPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Global from './pages/Global';
 import Latestdetails from './components/Latestdetails/Latestdetails';
 import IrelandPage from './pages/Ireland';
 import BrazilPage from './pages/Brazil';
@@ -20,7 +19,6 @@ const App = () => (
       <Route path="/latest" element={<LatestPage />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/global" element={<Global />} />
       <Route path="/latest-study/:id" element={<Latestdetails />} />
 
     </Routes>

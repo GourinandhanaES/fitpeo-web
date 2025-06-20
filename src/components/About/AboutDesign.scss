@@ -110,10 +110,23 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-top: 15px;
     font-size: 1.2rem;
     color: #c7c7c9;
-    line-height: 1.3;
+
+    .point-line {
+      position: relative;
+      display: block;
+      padding-left: 1.2em;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white; 
+        font-size: 1.2em;
+      }
+    }
   }
   &__description4 > * {
   flex: 1;          

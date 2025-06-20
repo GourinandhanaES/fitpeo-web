@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+.dlogo{
+  margin-top: -60px;
+  margin-left: -30px;
+}
 // contact page
 
 .contact {
@@ -24,7 +28,7 @@ body {
     max-width: 1500px;
     margin: 0 auto;
     gap: 4rem;
-    margin-bottom: 8.5rem;
+    margin-bottom: 1.5rem;
 
     @media (max-width: 992px) {
       flex-direction: column;
@@ -57,91 +61,130 @@ body {
     flex: 1;
 
     .form-wrapper {
-      border: 1px solid white;
+      border: 1px solid #E7E7E7;
       padding: 2rem;
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
 
       h2 {
-        font-size: 2rem;
+        font-size: 3.5rem;
         font-weight: 500;
         margin-bottom: 1.5rem;
-        color: white;
+        margin-top: 0rem;
+        color: #E7E7E7;
       }
 
       form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-
-        input,
-        select,
-        textarea {
-          background: transparent;
-          border: 1px solid white;
-          color: white;
-          padding: 0.75rem;
-          font-size: 1rem;
-          font-family: inherit;
-          outline: none;
-        }
-
-        textarea {
-          resize: none;
-        }
-
-        .checkbox-label {
-          display: flex;
-          align-items: flex-start;
-          gap: 0.6rem;
-          font-size: 0.8rem;
-          color: white;
+        .form-field {
+          margin-bottom: 0; 
           position: relative;
 
-          input[type="checkbox"] {
-            appearance: none;
-            width: 18px;
-            height: 18px;
-            border: 1px solid white;
-            background: transparent;
-            position: relative;
-            margin-top: 3px;
-            cursor: pointer;
+          input[type="text"],
+          input[type="email"],
+          textarea {
+            width: 100%;
+            padding: 14px;
+            background-color: transparent;
+            color: #cccccc;
+            font-size: 18px;
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
 
-            &:checked::after {
-              content: "✕";
-              position: absolute;
-              font-size: 14px;
-              top: -2px;
-              left: 3px;
+            &::placeholder {
+              color: #cccccc; 
+              opacity: 1;
+            }
+
+            &:focus {
+              outline: none;
+              border-color: #a3a2a2;
+            }
+          }
+
+          .custom-dropdown {
+            width: 100%;
+            padding: 18px;
+            background-color: transparent;
+            color: #cccccc;
+            font-size: 18px;
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
+
+            option {
+              background-color: black;
               color: white;
+              padding: 10px;
+              border-bottom: none;
+              margin-bottom: 4px;
+            }
+
+            &:focus {
+              outline: none;
+              border: 1px solid white;
+            }
+          }
+
+          label {
+            display: none;
+          }
+
+          textarea {
+            font-family: 'Arial', sans-serif;
+            resize: vertical;
+            min-height: 100px;
+          }
+        }
+
+        .consent-section {
+          margin: 30px 0;
+
+          .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            user-select: none;
+
+            &.small-text {
+              font-size: 12px;
+              line-height: 1.4;
+              color: #c0bcbc;
             }
           }
         }
 
         .privacy-link {
-          font-size: 0.75rem;
-          color: white;
-          text-decoration: underline;
-          margin-top: 0.5rem;
+          margin: 20px 0 30px 0;
+
+          .privacy-policy-link {
+            color: #bbbaba;
+            text-decoration: underline;
+            font-size: 12.5px;
+            font-weight: 600;
+
+            &:hover {
+              color: #ccc;
+            }
+          }
         }
 
         .submit-button {
-          margin-top: 1.5rem;
-          padding: 0.7rem 1.5rem;
-          background: white;
-          color: black;
-          border-radius: 25px;
-          font-weight: 600;
-          font-size: 1rem;
+          background-color: #E7E7E7;
+          color: #000;
           border: none;
+          padding: 15px 30px;
+          font-size: 20px;
+          font-weight: 600;
           cursor: pointer;
-          width: fit-content;
-          transition: all 0.3s ease;
+          transition: background-color 0.3s ease;
+          border-radius: 2rem;
 
           &:hover {
-            background: #ff5b3c;
-            color: white;
+            background-color: #e0e0e0;
+          }
+
+          &:active {
+            background-color: #d0d0d0;
           }
         }
       }

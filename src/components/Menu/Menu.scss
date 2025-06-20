@@ -67,6 +67,10 @@
         }
     }
 
+    &__fixed-nav.hide-on-open {
+        display: none !important;
+    }
+
     &__overlay {
     position: fixed;
     inset: 0;

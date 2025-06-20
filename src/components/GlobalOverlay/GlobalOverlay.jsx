@@ -3,6 +3,7 @@ import './GlobalOverlay.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import LogoImg from '../../assets/images/Logo.png';
 
 const chapters = [
   { label: 'UNITED KINGDOM', path: '/' },
@@ -26,6 +27,7 @@ const GlobalOverlay = ({ onClose }) => {
       </div>
       <div className="chapter-overlay__content">
         <div className="chapter-overlay__left">
+           <img src={LogoImg} alt="Logo" className="dlogoo" />
           <h2>Select Global Chapter:</h2>
         </div>
         <div className="chapter-overlay__right">

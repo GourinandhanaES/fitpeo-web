@@ -37,6 +37,11 @@
     font-size: 1rem;
     font-weight: bold;
     padding-right: 2rem;
+
+    .dlogoo{
+      margin-top: 0;
+      margin-left: -40px;
+    }
   }
 
   &__right {
@@ -48,6 +53,7 @@
     font-family: "Bebas Neue", sans-serif;
     line-height: 0.85;
     letter-spacing: -0.5px;
+    margin-top: 7rem;
 
     .chapter-overlay__item {
       color: #E7E7E7;

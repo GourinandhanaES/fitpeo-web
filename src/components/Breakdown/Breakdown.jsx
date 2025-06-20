@@ -42,7 +42,12 @@ const BreakdownSection = () => {
 
   return (
     <section className="breakdown">
-      <div className="breakdown__container">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="breakdown__container"
+      >
         <div className="breakdown__left">
             <div className="breakdown__left sticky-heading">
               <h2>This is Breakdown</h2>
@@ -87,7 +92,7 @@ const BreakdownSection = () => {
 
           <a href="https://www.youtube.com/watch?v=XpnOe94eXdM&feature=youtu.be" target='_blank'><button className="intro-button">View our D! Intro Video</button></a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

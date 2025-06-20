@@ -61,14 +61,9 @@
 
   &__images {
     display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    margin-top: -5rem;
-    width: 400px;
-    height: 200px;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: -30px;
+    margin-bottom: 2rem;
   }
-  &__images > * {
-  flex: 1;          
-  min-width: 0;         
-}
 }

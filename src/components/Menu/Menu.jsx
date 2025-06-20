@@ -68,7 +68,7 @@ const Menu = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.8, ease: 'easeOut' }}
           >
-      <div ref={menuRef} className={`menu__fixed-nav ${atFooter ? 'stuck-to-footer' : ''}${isOpen ? 'hide-on-open' : ''}`} >
+      <div ref={menuRef} className={`menu__fixed-nav ${atFooter ? 'stuck-to-footer' : ''} ${isOpen ? 'hide-on-open' : ''}`}>
         <button className="menu__menu-btn" onClick={() => setIsOpen(!isOpen)}>
           Menu <FontAwesomeIcon icon={isOpen ? faXmark : faPlus} className="icon" />
         </button>

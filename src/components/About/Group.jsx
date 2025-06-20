@@ -43,9 +43,16 @@ const Group = () => {
         </div>
 
         <div className="group__right">
-        
+          {groupdata.map((item, index) => (
+            <div className="group__card" key={index}>
+              <img src={item.image} alt={item.name} className="group__image" />
+              <h3 className="group__name">{item.name}</h3>
+              <p className="group__designers">{item.designers}</p>
+            </div>
+          ))}
         </div>
       </div>
+      <div style={{ height: '150px', backgroundColor:'black', borderBottomRightRadius:"35px", borderBottomLeftRadius:"35px" }}></div>
       </motion.div>
     </section>
   );
