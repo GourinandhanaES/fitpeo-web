@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import './LatestDetails.scss';
+import './Latestdetails.scss';
 import LogoImg from '../../assets/images/Logo.png';
 import Menu from '../Menu/Menu';
 import Footer from '../Footer/Footer';
